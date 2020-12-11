@@ -18,7 +18,7 @@ u_real = 'e**(-t)*sin(pi*x)'
 f = '(pi**2-1)*e**(-t)*sin(pi*x)'
 
 # mesh
-x = np.linspace(0,1,11) # nodes in array format
+x = np.linspace(0,1,12) # nodes in array format
 h = np.diff(x) # stepsize
 numN = len(x) # number of nodes
 numE = numN - 1 # number of elements
@@ -28,7 +28,7 @@ u_0 = 'sin(pi*x)' # u(x,0)
 dir_bc = np.array(([0, 0], [numN-1,0])) # in format [node, value]
 
 # time
-dt = 1/400 #timestep
+dt = 1/560 #timestep
 time = np.arange(0,1+dt,dt) # total
 
 ### END OF INPUTS ###
@@ -130,10 +130,10 @@ ax.plot(x, u, label = 'Forward Euler')
 ax.plot(x_real, u_real, label = 'Analytical')
 ax.set_xlabel('x')
 ax.set_ylabel('u')
-ax.set_title('Forward Euler vs Analytical Solution @ t=1 (dt=1/400)')
+ax.set_title('Forward Euler vs Analytical Solution @ t=1 (dt=1/560) with 12 Nodes Instead of 11')
 ax.legend()
 ax.grid(True)
 
-plt.savefig('./plots/Forward400.png',dpi = 200)
+plt.savefig('./plots/Forward560increasedsteps.png',dpi = 200)
 plt.show()
 

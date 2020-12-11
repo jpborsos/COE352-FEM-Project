@@ -18,7 +18,7 @@ u_real = 'e**(-t)*sin(pi*x)'
 f = '(pi**2-1)*e**(-t)*sin(pi*x)'
 
 # mesh
-x = np.linspace(0,1,11) # nodes in array format
+x = np.linspace(0,1,11) # bottom of domain, top of domain, number of nodes
 h = np.diff(x) # stepsize
 numN = len(x) # number of nodes
 numE = numN - 1 # number of elements
@@ -28,7 +28,7 @@ u_0 = 'sin(pi*x)' # u(x,0)
 dir_bc = np.array(([0, 0], [numN-1,0])) # in format [node, value]
 
 # time
-dt = 1/551 #timestep
+dt = 1/5 #timestep
 time = np.arange(0,1+dt,dt) # total
 
 ### END OF INPUTS ###
@@ -126,9 +126,9 @@ ax.plot(x, u, label = 'Backward Euler')
 ax.plot(x_real, u_real, label = 'Analytical')
 ax.set_xlabel('x')
 ax.set_ylabel('u')
-ax.set_title('Backward Euler vs Analytical Solution @ t=1 (dt = 1/551)')
+ax.set_title('Backward Euler vs Analytical Solution @ t=1 (dt = 1/5)')
 ax.legend()
 ax.grid(True)
 
-plt.savefig('./plots/Backward551.png',dpi = 200)
+plt.savefig('./plots/Backward5.png',dpi = 200)
 plt.show()
