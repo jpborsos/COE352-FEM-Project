@@ -4,8 +4,8 @@
 
 At a time step of dt = 1/551, our results are unstable, as you can see from the plot below. If we increase the timestep, as demonstrated with the plots of dt = 1/500 and 1/400, the results remain unstable and do not converge to the analytical solution. 
 
-![plot][./plots/Forward551.png]
-![plot][./plots/Forward500.png]
-![plot][./plots/Forward400.png]
+![plot](./plots/Forward551.png)
+![plot](./plots/Forward500.png)
+![plot](./plots/Forward400.png)
 
 However, if we decrease the 
