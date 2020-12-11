@@ -8,7 +8,7 @@ At a time step of dt = 1/551, the forward Euler results are unstable, as you can
 ![plot](./plots/Forward500.png)
 ![plot](./plots/Forward400.png)
 
-However, if we decrease the timestep to dt = 1/560, the solution converges to a result close to the analytical solution.
+However, if we decrease the timestep to dt = 1/560, the solution converges to a result close to the analytical solution. This is the closest point to stability I could find.
 
 ![plot](./plots/Forward560.png)
 
